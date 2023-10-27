@@ -1,23 +1,26 @@
 package com.example.a139846mexptepeliculascadrechadelrey_jorgealejandro;
 
-import com.google.gson.annotations.SerializedName;
 
-public class Pelicula {
-    @SerializedName("titulo")
+import java.util.List;
+
+public class PeliModelo {
+
     private String titulo;
-    @SerializedName("director")
     private String director;
-    @SerializedName("actores")
-    private String actores;
-    @SerializedName("portada")
+    private List<String> actores;
     private String portada;
 
-    public Pelicula(String titulo, String director, String actores, String portada) {
+    public PeliModelo() {
+    }
+
+    public PeliModelo(String titulo, String director, List<String> actores, String portada) {                                                                  //♠
         this.titulo = titulo;
         this.director = director;
         this.actores = actores;
         this.portada = portada;
     }
+
+    // Getters y setters
 
     public String getTitulo() {
         return titulo;
@@ -35,11 +38,11 @@ public class Pelicula {
         this.director = director;
     }
 
-    public String getActores() {
+    public List<String> getActores() {
         return actores;
     }
 
-    public void setActores(String actores) {
+    public void setActores(List<String> actores) {
         this.actores = actores;
     }
 
